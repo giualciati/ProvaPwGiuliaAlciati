@@ -1,0 +1,122 @@
+.signUp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUp {
+    margin: 70px;
+    max-width: 1300px;
+    width: 90%;
+    background: #FCFFFD;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-signUp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+}
+
+.signup-header{
+    align-self: start;
+    margin-bottom: 3rem;
+}
+
+.signup-header h2{
+    font-size: 30px;
+}
+
+
+.signup-header h2::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #80BBB5;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #80BBB5;
+}
+
+.input-box label,
+.gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder{
+    color: #000000be;
+}
+
+.gender-group{
+    display: flex;
+    margin: 0.62rem;
+    padding: 0 0.5rem;
+}
+
+.gender-input{
+    display: flex;
+    margin: 0.62rem;
+    align-items: center;
+}
+
+
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.signUp-btn {
+    width: 100%; 
+    max-width: 400px;  
+    padding: 12px 20px;
+    background-color: #80BBB5; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block; 
+    margin: 20px auto; 
+}
+
+.signUp-btn:hover {
+    background-color: #73B2AC;
+    transform: scale(1.05); 
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Cadastrar voluntário</title>
+</head>
+<body>
+<div class="signUp-container">
+<main class="signUp">
+    <form class="form-signUp">
+        <div class="signup-header">
+        <div class="title-signup">
+        <h2>Cadastro</h2>
+        </div>
+        </div>
+        <div class="input-group">
+        <div class="input-box">
+            <label for="txtnome">Nome Completo</label>
+            <input type="text" id="txtnome" placeholder="Nome Completo" required>
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="CPF">CPF</label>
+            <input type="text" id="CPF" placeholder="CPF" required>
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="txtemail">E-mail</label>
+            <input type="text" id="txtemail" placeholder="Email" required>
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" placeholder="(xx) xxxx-xxxx" required>
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="dataNascimento">Data de nascimento</label>
+            <input type="date" id="dataNascimento" placeholder="Data de nascimento" required>
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" maxlength="9" onblur="buscarEnderecoPorCEP()" placeholder="CEP" required>
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" readonly placeholder="Endereço">
+            <br><br>
+        </div>
+        <div class="input-box">
+            <label for="numeroEndereco">Número</label>
+            <input type="number" id="numeroEndereco"  placeholder="Número" required>
+            <br><br>
+        </div>
+    </div>
+
+        <div class="gender-inputs">
+            <div class="gender-title">
+                <h6>Gênero</h6>
+            </div>
+            <div class="gender-group">
+                <div class="gender-input">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Masculino</label>
+                </div>
+                <div class="gender-input">
+                    <input type="radio"  name="gender"  id="female">
+                    <label for="female">Feminino</label>
+                </div>
+                <div class="gender-input">
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Outro</label>
+                </div>
+                <div class="gender-input">
+                    <input type="radio"  name="gender"  id="none">
+                    <label for="none">Prefiro não informar</label>
+                </div>
+            </div>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6Lf7XQorAAAAAKxMFPWqSdyW9o6yP-ZdPD_ZX9jb"></div>
+        <button type="submit" class="signUp-btn">Adicionar Voluntário</button>
+    </form>
+</main>
+</div>
+<script src="assets/javascript/cadastro.js"></script>
+</body>
+</html>
