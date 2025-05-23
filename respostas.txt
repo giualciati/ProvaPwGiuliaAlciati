@@ -1,0 +1,24 @@
+1. Como foi feita a integração com a API do ViaCEP?
+Utilizei para buscar os dados do endereço automaticamente a partir do CEP informado pelo usuário na área de cadastro. Quando o campo de CEP é preenchido corretamente, faço uma requisição fetch para https://viacep.com.br/ws/${cep}/json/ e, se os dados forem válidos, preencho automaticamente os campos de rua, bairro, cidade e estado com os valores retornados.
+
+2. Como a imagem aleatória foi gerada?
+Usei a API do Unsplash, que permite buscar imagens aleatórias. No meu caso, utilizei o endpoint de imagens aleatórias com uma palavra-chave como parâmetro (https://api.unsplash.com/photos/random?query=person&orientation=portrait).
+
+3. Como você utilizou o LocalStorage?
+Utilizei o localStorage para armazenar os dados dos usuários cadastrados. Quando o formulário de cadastro é enviado com sucesso, os dados são transformados em JSON e salvos no localStorage. Assim, quando a Landing Page é acessada, eu recupero esses dados usando JSON.parse(localStorage.getItem('usuarios')) para exibir os usuários cadastrados em formato de cards.
+
+4. Como você organizou os cards na tela?
+Os cards foram organizados com CSS e eles mencionam dados como nome, email, telefone, endereço completo, gênero e temperatura da cidade de acordo com o cep fornecido.
+
+5. Como foi implementado o sistema de login e controle de acesso?
+O login foi feito comparando os dados digitados pelo usuário com um par fixo de credenciais (adm@gmail.com e ADM12345). Se os dados estiverem corretos, o usuário é redirecionado para a página de cadastro ou dashboard. Caso contrário, uma mensagem de erro é exibida. Também limitei o tempo de inatividade para 5 minutos e voltar automaticamente para a página de login.
+
+6. Como foi feito o controle de e-mail duplicado?
+Antes de adicionar um novo usuário, faço uma verificação no localStorage para ver se já existe algum usuário com o mesmo e-mail. Se existir, o cadastro é bloqueado e uma mensagem de erro é exibida.
+
+7. Como foi implementado o redirecionamento após 5 minutos de inatividade?
+Implementei um sistema de temporizador que reinicia toda vez que o usuário interage com a página (movimenta o mouse, clica, ou digita). Se não houver nenhuma interação por 5 minutos, o sistema considera como inatividade e redireciona automaticamente para a tela de login.
+
+8. O que você faria diferente se fosse um projeto real?
+Um backend com banco de dados para guardar os dados de forma segura e permanente;
+Impedir que a foto fique mudando toda atualização da página.
