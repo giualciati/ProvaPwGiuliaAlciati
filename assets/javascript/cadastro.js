@@ -43,7 +43,6 @@ function validarSignUp(event) {
 
     const dataNascimento = document.getElementById("dataNascimento").value;
     const generoSelecionado = document.querySelector('input[name="gender"]:checked');
-    const captcha = grecaptcha.getResponse();
 
     if (!validarIdade(dataNascimento)) {
         alert("Você deve ser maior de idade para se cadastrar.");
@@ -52,11 +51,6 @@ function validarSignUp(event) {
 
     if (!generoSelecionado) {
         alert("Por favor, selecione um gênero antes de continuar.");
-        return;
-    }
-
-    if (!captcha) {
-        alert("Por favor, confirme que você não é um robô.");
         return;
     }
 
